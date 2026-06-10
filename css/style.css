@@ -560,11 +560,17 @@ body.dark-mode .hero-badge {
 }
 
 .service-card p {
-  color: var(--text-muted);
+  color: var(--text-dark);
+  /* color: red; */
   font-size: 0.92rem;
   flex-grow: 1;
 }
-
+.text-darking_color {
+  color: var(--text-dark);
+}
+input::placeholder {
+  color: var(--text-muted) !important;
+}
 .tag-sm {
   background: var(--accent-light);
   color: var(--primary);
