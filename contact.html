@@ -88,28 +88,28 @@
           <div class="project-builder-card">
             <h3 class="fw-bold mb-4">Project Scope Builder</h3>
             
-            <form id="projectScopeForm">
+            <form id="projectScopeForm" action="https://formspree.io/f/xzdqoyaj"  method="POST">
               <div class="row g-3">
                 <div class="col-md-6">
                   <label class="form-label" for="fullName">Full Name</label>
-                  <input type="text" class="form-control" id="fullName" placeholder="Jane Doe" required>
+                  <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Jane Doe" required>
                 </div>
                 <div class="col-md-6">
                   <label class="form-label" for="emailAddr">Email Address</label>
-                  <input type="email" class="form-control" id="emailAddr" placeholder="jane@company.com" required>
+                  <input type="email" class="form-control" name="email" id="emailAddr" placeholder="jane@company.com" required>
                 </div>
                 <div class="col-md-6">
                   <label class="form-label" for="companyName">Company Name</label>
-                  <input type="text" class="form-control" id="companyName" placeholder="Acme Corp">
+                  <input type="text" class="form-control" id="companyName" name="company" placeholder="Acme Corp">
                 </div>
                 <div class="col-md-6">
                   <label class="form-label" for="phoneNum">Phone Number</label>
-                  <input type="tel" class="form-control" id="phoneNum" placeholder="+250 798 561 792">
+                  <input type="tel" class="form-control" id="phoneNum" name="phone" placeholder="+250 798 561 792">
                 </div>
                 
                 <div class="col-md-6">
                   <label class="form-label" for="projectType">Service Requirement</label>
-                  <select class="form-select" id="projectType">
+                  <select class="form-select" name="projectType" id="projectType">
                     <option value="custom-software">Custom Software & APIs</option>
                     <option value="web-app">Web Apps & SaaS Setup</option>
                     <option value="mobile-app">Mobile Application (iOS/Android)</option>
@@ -121,7 +121,7 @@
                 
                 <div class="col-md-6">
                   <label class="form-label" for="budgetRange">Estimated Budget (USD)</label>
-                  <select class="form-select" id="budgetRange">
+                  <select class="form-select" name="budgetRange" id="budgetRange">
                     <option value="starter">$5,000 - $15,000</option>
                     <option value="pro">$15,000 - $40,000</option>
                     <option value="enterprise">$40,000 - $100,000+</option>
@@ -130,11 +130,11 @@
                 
                 <div class="col-12">
                   <label class="form-label" for="projectBrief">Detailed Project Brief</label>
-                  <textarea class="form-control" id="projectBrief" rows="4" placeholder="Briefly describe what you're looking to build, integration points, key challenges, etc." required></textarea>
+                  <textarea class="form-control" name="message" id="projectBrief" rows="4" placeholder="Briefly describe what you're looking to build, integration points, key challenges, etc." required></textarea>
                 </div>
                 
                 <div class="col-12">
-                  <button type="submit" class="btn btn-start-today w-100 py-3 mt-2 justify-content-center">Submit Scope Parameters →</button>
+                  <button type="submit" name="submit" class="btn btn-start-today w-100 py-3 mt-2 justify-content-center">Submit Scope Parameters →</button>
                 </div>
               </div>
             </form>
