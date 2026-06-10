@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Contact Us | CODELION SOFTWARE — Project Scoping & FAQs</title>
+  <meta name="description" content="Get in touch with CODELION SOFTWARE. Submit your project requirements, view FAQs, and contact our Kigali heights office.">
+  <link rel="canonical" href="https://codelion.com/contact.html">
+
+  <!-- Favicon -->
+  <link id="favicon" rel="icon" type="image/png" href="images/fave-icon.png">
+  <link rel="apple-touch-icon" href="images/fave-icon.png">
+
+  <!-- External Stylesheets -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="preloader"><div class="preloader-spinner"></div></div>
+<a href="https://wa.me/250798561792?text=Hello%20CODELION%20SOFTWARE%2C%20I'd%20like%20to%20discuss%20project%20details." target="_blank" class="whatsapp-btn" aria-label="Chat on WhatsApp"><i class="bi bi-whatsapp"></i></a>
+<button id="backToTop" class="back-to-top" aria-label="Back to Top">
+  <img src="images/fave-icon.png" alt="CODELION Logo" class="back-to-top-img">
+  <i class="bi bi-arrow-up-short back-to-top-arrow"></i>
+</button>
+
+<!-- Header Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/logo_light.jpg" alt="CODELION Logo" class="logo-img" id="navbarLogo">
+      <span class="brand-text">CODELION SOFTWARE</span>
+    </a>
+    <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="bi bi-list" id="menuToggleIcon" style="font-size: 1.25rem; color: var(--text-dark) !important; transition: var(--transition-fast);"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="work.html">Work</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2">
+        <button id="themeToggle" class="btn-link nav-link" aria-label="Toggle Theme">
+          <i class="bi bi-moon-fill" id="themeIcon"></i>
+        </button>
+        <a href="contact.html" class="btn btn-start-today">Start project →</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Navigation (Bottom Nav) -->
+<div class="bottom-nav">
+  <a href="index.html" class="bottom-nav-item"><i class="bi bi-house-door-fill"></i><span>Home</span></a>
+  <a href="services.html" class="bottom-nav-item"><i class="bi bi-grid-3x3-gap-fill"></i><span>Services</span></a>
+  <a href="work.html" class="bottom-nav-item"><i class="bi bi-briefcase-fill"></i><span>Work</span></a>
+  <a href="about.html" class="bottom-nav-item"><i class="bi bi-person-fill"></i><span>About</span></a>
+  <a href="contact.html" class="bottom-nav-item active"><i class="bi bi-envelope-fill"></i><span>Contact</span></a>
+</div>
+
+<main style="margin-top: 80px;">
+  <!-- Subpage Hero Banner -->
+  <section class="subpage-hero">
+    <div class="container text-center py-4">
+      <h1 class="subpage-hero-title" data-aos="fade-up">Start Your Project</h1>
+      <p class="lead text-white-50 mx-auto mt-3" style="max-width: 600px;" data-aos="fade-up" data-aos-delay="100">
+        Submit your project details or browse our FAQs to coordinate scope and launch parameters.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Project Builder & Info Grid -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row g-5">
+        
+        <!-- Form Section -->
+        <div class="col-lg-7" data-aos="fade-right">
+          <div class="project-builder-card">
+            <h3 class="fw-bold mb-4">Project Scope Builder</h3>
+            
+            <form id="projectScopeForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="fullName">Full Name</label>
+                  <input type="text" class="form-control" id="fullName" placeholder="Jane Doe" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="emailAddr">Email Address</label>
+                  <input type="email" class="form-control" id="emailAddr" placeholder="jane@company.com" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="companyName">Company Name</label>
+                  <input type="text" class="form-control" id="companyName" placeholder="Acme Corp">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="phoneNum">Phone Number</label>
+                  <input type="tel" class="form-control" id="phoneNum" placeholder="+250 798 561 792">
+                </div>
+                
+                <div class="col-md-6">
+                  <label class="form-label" for="projectType">Service Requirement</label>
+                  <select class="form-select" id="projectType">
+                    <option value="custom-software">Custom Software & APIs</option>
+                    <option value="web-app">Web Apps & SaaS Setup</option>
+                    <option value="mobile-app">Mobile Application (iOS/Android)</option>
+                    <option value="ai-ml">AI & Large Language Models</option>
+                    <option value="security">Cybersecurity Audit</option>
+                    <option value="devops">DevOps & Cloud Setup</option>
+                  </select>
+                </div>
+                
+                <div class="col-md-6">
+                  <label class="form-label" for="budgetRange">Estimated Budget (USD)</label>
+                  <select class="form-select" id="budgetRange">
+                    <option value="starter">$5,000 - $15,000</option>
+                    <option value="pro">$15,000 - $40,000</option>
+                    <option value="enterprise">$40,000 - $100,000+</option>
+                  </select>
+                </div>
+                
+                <div class="col-12">
+                  <label class="form-label" for="projectBrief">Detailed Project Brief</label>
+                  <textarea class="form-control" id="projectBrief" rows="4" placeholder="Briefly describe what you're looking to build, integration points, key challenges, etc." required></textarea>
+                </div>
+                
+                <div class="col-12">
+                  <button type="submit" class="btn btn-start-today w-100 py-3 mt-2 justify-content-center">Submit Scope Parameters →</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Contact details column -->
+        <div class="col-lg-5" data-aos="fade-left">
+          <div class="bg-white border rounded-4 shadow-sm p-4 p-md-5 mb-4">
+            <h4 class="fw-bold mb-4">Kigali Head Office</h4>
+            <div class="d-flex align-items-start gap-3 mb-3">
+              <i class="bi bi-geo-alt-fill text-primary fs-4"></i>
+              <div>
+                <h6 class="fw-bold mb-1">Office Address</h6>
+                <p class="text-muted small mb-0">Kigali Heights, Block B, Floor 3, Kigali, Rwanda</p>
+              </div>
+            </div>
+            
+            <div class="d-flex align-items-start gap-3 mb-3">
+              <i class="bi bi-envelope-fill text-primary fs-4"></i>
+              <div>
+                <h6 class="fw-bold mb-1">Direct Email</h6>
+                <p class="text-muted small mb-0"><a href="mailto:info@codelion.com" class="text-decoration-none text-muted">info@codelion.com</a></p>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start gap-3 mb-4">
+              <i class="bi bi-telephone-fill text-primary fs-4"></i>
+              <div>
+                <h6 class="fw-bold mb-1">Direct Call</h6>
+                <p class="text-muted small mb-0"><a href="tel:+250798561792" class="text-decoration-none text-muted">+250 798 561 792</a></p>
+              </div>
+            </div>
+
+            <hr>
+
+            <h5 class="fw-bold mt-4 mb-3">Quick Links</h5>
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="mailto:info@codelion.com" class="btn btn-sm btn-outline-primary px-3 py-2" style="border-radius: 8px;"><i class="bi bi-envelope-at-fill me-1"></i> Send Email</a>
+              <a href="https://wa.me/250798561792?text=Hello%20CODELION%20SOFTWARE%2C%20I'd%20like%20to%20discuss%20our%20project." target="_blank" class="btn btn-sm btn-outline-success px-3 py-2" style="border-radius: 8px;"><i class="bi bi-whatsapp me-1"></i> WhatsApp</a>
+            </div>
+          </div>
+
+          <!-- Map/Card mockup -->
+          <div class="bg-white border rounded-4 shadow-sm p-4 text-center">
+            <h5 class="fw-bold text-start mb-3"><i class="bi bi-map-fill text-primary me-1"></i> Kigali Heights Map</h5>
+            <div style="height: 160px; border-radius: 14px; position: relative;" class="map-placeholder d-flex align-items-center justify-content-center border">
+              <div class="bg-white px-3 py-2 rounded-pill shadow border d-flex align-items-center gap-2">
+                <i class="bi bi-pin-map-fill text-danger fs-5"></i>
+                <span class="small fw-bold text-dark">CODELION Heights HQ</span>
+              </div>
+            </div>
+            <p class="text-muted small mt-2 mb-0">Located next to the Kigali Convention Center</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Accordion FAQs Section -->
+  <section class="section-padding bg-soft border-top">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="caption-sm text-primary">Got Questions?</span>
+        <h2 class="fw-bold mt-2">Frequently Asked Questions</h2>
+        <p class="lead-text">Common inquiries regarding our collaboration models, SLA terms, and engineering processes.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion" id="faqAccordion">
+            <!-- Item 1 -->
+            <div class="accordion-item" data-aos="fade-up">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  How long does a typical custom software project take?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  An MVP development cycle generally spans 6 to 10 weeks depending on target platforms. Large-scale enterprise dashboards, legacy migrations, and custom database setups take between 3 and 6 months of active development.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="accordion-item" data-aos="fade-up">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  What is your post-launch support and SLA model?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  We provide a standard 3-month bug warranty free of charge post-launch. For enterprise setups, we offer monthly Service Level Agreements (SLAs) including 24/7 server monitoring alerts, automated backups, compliance updates, and dedicated hotfixes.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="accordion-item" data-aos="fade-up">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Do you sign Non-Disclosure Agreements (NDAs)?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes. We take intellectual property and codebase confidentiality seriously. We sign strict mutual NDAs before reviewing detailed product briefs or proprietary system workflows.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="accordion-item" data-aos="fade-up">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Can we hire a dedicated team of engineers for ongoing maintenance?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes, under our Enterprise plan, we assemble dedicated squads (developers, QA testers, and DevOps leads) working solely on your roadmap under an agile coordination structure.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer Section -->
+<footer>
+  <div class="container pb-4">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="footer-brand-container">
+          <img src="images/logo_light.jpg" alt="CODELION Footer Logo" class="logo-img footer-logo-img" id="footerLogo" style="height: 32px; width: auto;">
+          <span class="brand-text">CODELION SOFTWARE</span>
+        </div>
+        <p class="text-muted small mt-3" style="max-width: 300px;">Africa's premier software engineering agency building scalable and high-performance digital infrastructure.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="fw-bold mb-3">Sitemap</h6>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="index.html" class="footer-link">Home</a></li>
+          <li class="mb-2"><a href="services.html" class="footer-link">Services</a></li>
+          <li class="mb-2"><a href="work.html" class="footer-link">Work</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="fw-bold mb-3">Company</h6>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="about.html" class="footer-link">About Us</a></li>
+          <li class="mb-2"><a href="contact.html" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="fw-bold mb-3">Newsletter</h6>
+        <p class="text-muted small">Stay updated on our latest project launches and tech insights.</p>
+        <form class="d-flex gap-2">
+          <input class="form-control" type="email" placeholder="Your email..." aria-label="Your email">
+          <button class="btn btn-primary-grad px-3" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <hr class="my-4">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center text-md-start">
+        <p class="text-muted small mb-0">© 2026 CODELION SOFTWARE. All rights reserved.</p>
+      </div>
+      <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+        <div class="d-flex gap-3 justify-content-center justify-content-md-end">
+          <a href="#" class="footer-link" aria-label="LinkedIn"><i class="bi bi-linkedin fs-5"></i></a>
+          <a href="#" class="footer-link" aria-label="GitHub"><i class="bi bi-github fs-5"></i></a>
+          <a href="#" class="footer-link" aria-label="Twitter"><i class="bi bi-twitter-x fs-5"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- External JavaScript Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
