@@ -571,6 +571,9 @@ body.dark-mode .hero-badge {
 input::placeholder {
   color: var(--text-muted) !important;
 }
+textarea::placeholder {
+  color: var(--text-muted) !important;
+}
 .tag-sm {
   background: var(--accent-light);
   color: var(--primary);
