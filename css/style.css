@@ -1027,9 +1027,9 @@ body.dark-mode .form-control, body.dark-mode .form-select {
 }
 
 .back-to-top-img {
-  width: 170%;
-  height: 170%;
-  margin-top: 18px;
+  width: 90%;
+  height: 90%;
+  margin-top: 2px;
   object-fit: cover;
   position: relative;
   z-index: 1;
