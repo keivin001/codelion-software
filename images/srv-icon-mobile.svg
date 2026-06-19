@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0056FE" />
+      <stop offset="100%" stop-color="#00B4FE" />
+    </linearGradient>
+    <style>
+      .phone-body { fill: #070f1e; stroke: #cbd5e1; stroke-width: 3; }
+      .screen { fill: #0a111f; stroke: #00B4FE; stroke-width: 1.5; }
+      .ui-element { fill: #1e293b; }
+      .ui-highlight { fill: url(#blueGrad); }
+      .home-btn { fill: #cbd5e1; }
+      .app-layout { animation: floatScreen 4s ease-in-out infinite alternate; }
+      @keyframes floatScreen { from { transform: translateY(0); } to { transform: translateY(-2px); } }
+    </style>
+  </defs>
+  <!-- Phone Shell -->
+  <rect x="18" y="4" width="28" height="56" rx="6" class="phone-body" />
+  <!-- Screen Area -->
+  <rect x="21" y="8" width="22" height="44" rx="3" class="screen" />
+  <!-- UI Layout on Screen -->
+  <g class="app-layout">
+    <!-- Top Notch -->
+    <rect x="29" y="5" width="6" height="1.5" fill="#cbd5e1" rx="0.5" />
+    <!-- Screen Header -->
+    <rect x="23" y="11" width="18" height="4" class="ui-highlight" />
+    <!-- Image placeholder wireframe -->
+    <rect x="23" y="18" width="18" height="12" class="ui-element" />
+    <line x1="23" y1="18" x2="41" y2="30" stroke="#00B4FE" stroke-width="1" />
+    <line x1="41" y1="18" x2="23" y2="30" stroke="#00B4FE" stroke-width="1" />
+    <!-- Text lines -->
+    <rect x="23" y="34" width="14" height="2" fill="#cbd5e1" rx="1" />
+    <rect x="23" y="38" width="18" height="2" fill="#cbd5e1" rx="1" />
+    <rect x="23" y="42" width="10" height="2" fill="#cbd5e1" rx="1" />
+    <!-- Button wireframe -->
+    <rect x="23" y="47" width="18" height="3" class="ui-highlight" rx="1.5" />
+  </g>
+  <!-- Home Button -->
+  <circle cx="32" cy="55" r="2" class="home-btn" />
+</svg>

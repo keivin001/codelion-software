@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0056FE" />
+      <stop offset="100%" stop-color="#00B4FE" />
+    </linearGradient>
+    <style>
+      .cloud-path { fill: #070f1e; stroke: #cbd5e1; stroke-width: 3; stroke-linejoin: round; }
+      .db-base { fill: #1e293b; stroke: #00B4FE; stroke-width: 1.5; }
+      .arrow { fill: url(#blueGrad); animation: bounce 2s infinite alternate; }
+      @keyframes bounce { from { transform: translateY(0); } to { transform: translateY(-3px); } }
+    </style>
+  </defs>
+  <!-- Cloud Outline -->
+  <path d="M18,44 C12,44 8,40 8,34 C8,29 12,25 17,24 C19,16 26,12 34,12 C42,12 48,17 50,24 C55,25 58,29 58,34 C58,40 54,44 48,44 Z" class="cloud-path" />
+  <!-- Server stack inside cloud -->
+  <rect x="22" y="22" width="20" height="6" rx="1.5" class="db-base" />
+  <rect x="22" y="30" width="20" height="6" rx="1.5" class="db-base" />
+  <rect x="22" y="38" width="20" height="6" rx="1.5" class="db-base" />
+  <!-- Indicator Lights -->
+  <circle cx="26" cy="25" r="1" fill="#00B4FE" />
+  <circle cx="26" cy="33" r="1" fill="#00B4FE" />
+  <circle cx="26" cy="41" r="1" fill="#00B4FE" />
+  <!-- Cloud Sync Arrows -->
+  <path d="M48,28 L51,32 L45,32 Z" class="arrow" />
+  <path d="M16,36 L13,32 L19,32 Z" class="arrow" style="animation-delay: 1s;" />
+</svg>

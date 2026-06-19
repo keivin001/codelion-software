@@ -3,35 +3,35 @@
 
   <!-- Home -->
   <url>
-    <loc>https://codelion-software-og6m.vercel.app/</loc>
+    <loc>https://codelion.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Services -->
   <url>
-    <loc>https://codelion-software-og6m.vercel.app/services.html</loc>
+    <loc>https://codelion.com/services.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Work / Portfolio -->
   <url>
-    <loc>https://codelion-software-og6m.vercel.app/work.html</loc>
+    <loc>https://codelion.com/work.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- About -->
   <url>
-    <loc>https://codelion-software-og6m.vercel.app/about.html</loc>
+    <loc>https://codelion.com/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Contact -->
   <url>
-    <loc>https://codelion-software-og6m.vercel.app/contact.html</loc>
+    <loc>https://codelion.com/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

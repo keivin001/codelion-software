@@ -78,7 +78,9 @@ body {
   -webkit-font-smoothing: antialiased;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
+a {
+  text-decoration: none;
+}
 @media (min-width: 992px) {
   body {
     padding-bottom: 0;
@@ -185,7 +187,7 @@ h4 {
   -webkit-backdrop-filter: blur(12px);
   transition: var(--transition);
   padding: 8px 0; /* Compact normal padding */
-  border-bottom: 1px solid var(--border-light);
+  /* border-bottom: 1px solid var(--border-light); */
   z-index: 1000;
 }
 
@@ -1281,4 +1283,571 @@ body.dark-mode .tech-trust-section {
 
 .team-img:hover {
   transform: scale(1.08);
+}
+
+/* ==========================================================================
+   REDESIGNED PREMIUM SERVICES PAGE - COMPACT & THEME COMPLIANT
+   ========================================================================== */
+
+/* Core Service Hero Section */
+.srv-hero {
+  padding: 100px 0 60px 0;
+  background: var(--bg-offwhite);
+  position: relative;
+  overflow: hidden;
+}
+
+.srv-hero-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(32px, 4.5vw, 44px);
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+}
+
+.srv-hero-title span {
+  color: var(--primary);
+}
+
+.srv-hero-subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 520px;
+}
+
+/* Redesigned Pill Buttons */
+.srv-btn-primary {
+  background: var(--primary);
+  color: #ffffff !important;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 10px 24px;
+  font-size: 0.88rem;
+  border: none;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.srv-btn-primary:hover {
+  background: var(--accent);
+}
+
+.srv-btn-outline {
+  background: transparent;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 10px 24px;
+  font-size: 0.88rem;
+  border: 1.5px solid var(--primary);
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+body.dark-mode .srv-btn-outline {
+  color: #ffffff !important;
+}
+
+body:not(.dark-mode) .srv-btn-outline {
+  color: var(--text-dark) !important;
+}
+
+.srv-btn-outline:hover {
+  background: rgba(0, 86, 254, 0.1);
+}
+
+/* Hexagon Rosette Styles */
+.hexagon-rosette {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  height: 380px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hex-wrap {
+  position: absolute;
+  width: 105px;
+  height: 120px; /* Aspect ratio matching 105x120 */
+  transition: all 0.25s ease;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Rosette Position Offsets (Flat-Topped Rosette configuration) */
+.hex-center       { top: calc(50% - 60px); left: calc(50% - 52.5px); }
+.hex-top          { top: calc(50% - 165px); left: calc(50% - 52.5px); }
+.hex-bottom       { top: calc(50% + 45px); left: calc(50% - 52.5px); }
+.hex-top-right    { top: calc(50% - 112px); left: calc(50% + 38px); }
+.hex-bottom-right { top: calc(50% - 8px); left: calc(50% + 38px); }
+.hex-top-left     { top: calc(50% - 112px); left: calc(50% - 143px); }
+.hex-bottom-left  { top: calc(50% - 8px); left: calc(50% - 143px); }
+
+.hex-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hex-poly {
+  fill: var(--bg-white);
+  stroke: var(--primary);
+  stroke-width: 2.2;
+  transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+/* Dark mode: hexagon background adapts automatically via --bg-white variable */
+body.dark-mode .hex-poly {
+  fill: var(--bg-white); /* resolves to #0A111F in dark mode */
+  stroke: var(--primary); /* resolves to brand-cyan in dark mode */
+}
+
+.hex-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 2;
+  transition: all 0.25s ease;
+}
+
+.hex-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all 0.25s ease;
+  display: block;
+}
+
+/* Hexagon Hover State - fill with primary brand color */
+.hex-wrap:hover .hex-poly {
+  stroke: #ffffff;
+  fill: var(--primary);
+}
+
+body.dark-mode .hex-wrap:hover .hex-poly {
+  stroke: #ffffff;
+  fill: var(--primary);
+}
+
+.hex-wrap:hover .hex-inner img {
+  filter: brightness(0) invert(1);
+}
+
+/* Responsive rosette scaling */
+@media (max-width: 991px) {
+  .hexagon-rosette {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .hexagon-rosette {
+    transform: scale(0.75);
+    height: 300px;
+    margin-top: 10px;
+  }
+}
+
+/* Services Grid & Core Cards Section */
+.srv-section-bg {
+  background: var(--bg-white);
+  padding: 60px 0;
+  position: relative;
+}
+
+.srv-badge {
+  color: var(--primary);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.srv-title {
+  color: var(--text-dark);
+  font-weight: 800;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.srv-title span {
+  color: var(--primary);
+}
+
+.srv-card-new {
+  background: var(--bg-white);
+  border: 1.5px solid var(--border-light);
+  border-radius: 12px;
+  padding: 28px 24px;
+  height: 100%;
+  transition: border-color 0.25s ease;
+  position: relative;
+}
+
+/* Card Hover State - Border color change ONLY, no shadow, no translate */
+.srv-card-new:hover {
+  border-color: var(--primary) !important;
+}
+
+.srv-card-icon-container {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background: rgba(var(--primary-rgb), 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 1.25rem;
+  margin-bottom: 18px;
+  transition: all 0.25s ease;
+}
+
+.srv-card-new:hover .srv-card-icon-container {
+  background: var(--primary);
+  color: var(--bg-white);
+}
+
+.srv-card-title {
+  color: var(--text-dark);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.srv-card-desc {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.srv-card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.srv-card-list li {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.srv-card-list li i {
+  color: var(--primary);
+  font-size: 0.85rem;
+}
+
+/* Technology Grid Styling - Vertical Card Layout */
+.srv-tech-section {
+  background: var(--bg-offwhite);
+  padding: 60px 0;
+  border-top: 1.5px solid var(--border-light);
+}
+
+/* 3-column grid matching the reference image */
+.srv-tech-grid-v {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 576px) {
+  .srv-tech-grid-v {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+/* Individual vertical card */
+.srv-tech-card-v {
+  background: var(--bg-white);
+  border: 1.5px solid var(--border-light);
+  border-radius: 18px;
+  padding: 28px 16px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.srv-tech-card-v::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.03) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.srv-tech-card-v:hover {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.08);
+}
+
+/* Icon container — brand-tinted bg set inline per card */
+.tech-icon-wrap {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  background: var(--bg-offwhite);
+  border: 1.5px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  flex-shrink: 0;
+}
+
+.srv-tech-card-v:hover .tech-icon-wrap {
+  transform: scale(1.06);
+}
+
+/* Next.js icon: always black background regardless of theme */
+.tech-icon-nextjs-wrap {
+  background: #000000 !important;
+  border-color: rgba(255,255,255,0.18) !important;
+}
+
+body.dark-mode .tech-icon-nextjs-wrap {
+  border-color: rgba(255,255,255,0.3) !important;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.06);
+}
+
+
+/* Card text */
+.srv-tech-card-v h5 {
+  color: var(--text-dark);
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.srv-tech-card-v span {
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.srv-tech-card-v:hover span {
+  color: var(--primary);
+}
+
+
+/* Pricing / Collaboration Models */
+.srv-pricing-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.srv-pricing-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  padding: 40px 30px;
+  position: relative;
+  transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.srv-pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(var(--primary-rgb), 0.3);
+}
+
+.srv-pricing-card.recommended {
+  border: 2px solid var(--primary);
+  box-shadow: var(--shadow-lg);
+  transform: scale(1.02);
+}
+
+.srv-pricing-card.recommended:hover {
+  transform: scale(1.02) translateY(-5px);
+}
+
+.recommended-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gradient);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 10px rgba(var(--primary-rgb), 0.2);
+}
+
+.srv-pricing-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.srv-pricing-header h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.srv-pricing-price {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.srv-pricing-header p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.srv-pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  flex-grow: 1;
+}
+
+.srv-pricing-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.srv-pricing-features li i {
+  color: var(--primary);
+  font-size: 1.2rem;
+  margin-top: -2px;
+}
+
+/* Call To Action Banner Section */
+.srv-cta-section {
+  background: var(--bg-white);
+  padding: 60px 0;
+  border-top: 1.5px solid var(--border-light);
+}
+
+.srv-cta-banner {
+  background: var(--gradient-dark);
+  border-radius: 20px;
+  padding: 50px 30px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.srv-cta-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.srv-cta-title {
+  color: #ffffff;
+  font-size: clamp(24px, 3.5vw, 32px);
+  font-weight: 800;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.srv-cta-desc {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  max-width: 580px;
+  margin: 0 auto 28px auto;
+  position: relative;
+  z-index: 2;
+}
+
+.srv-cta-buttons {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.srv-btn-cta-white {
+  background: #ffffff;
+  color: var(--primary) !important;
+  font-weight: 700;
+  border-radius: 50px;
+  padding: 10px 28px;
+  font-size: 0.88rem;
+  border: none;
+  transition: background-color 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.srv-btn-cta-white:hover {
+  background: #f1f5f9;
+}
+
+.srv-btn-cta-outline {
+  background: transparent;
+  color: #ffffff !important;
+  font-weight: 700;
+  border-radius: 50px;
+  padding: 10px 28px;
+  font-size: 0.88rem;
+  border: 1.5px solid #ffffff;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.srv-btn-cta-outline:hover {
+  background: #ffffff;
+  color: var(--brand-blue) !important;
 }

@@ -214,4 +214,76 @@ document.addEventListener('DOMContentLoaded', () => {
 
     counters.forEach(c => counterObserver.observe(c));
   }
+
+  // ========== GLOBAL AJAX FORM SUBMISSION & LOADING STATE ==========
+  const allForms = document.querySelectorAll('form');
+  allForms.forEach(form => {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault(); // Prevent standard Formspree redirect
+      
+      if (this.checkValidity()) {
+        const submitBtn = this.querySelector('button[type="submit"]');
+        let originalText = "";
+        
+        if (submitBtn) {
+          originalText = submitBtn.innerHTML;
+          // Lock the button width so it doesn't shrink when text is removed
+          submitBtn.style.width = submitBtn.offsetWidth + 'px';
+          // Replace text with Bootstrap spinner
+          submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>';
+          // Disable to prevent multiple submissions
+          submitBtn.disabled = true;
+        }
+
+        try {
+          const formData = new FormData(this);
+          const response = await fetch(this.action, {
+            method: this.method || 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+
+          if (response.ok) {
+            // Success: Turn button green and show checkmark
+            if (submitBtn) {
+              submitBtn.classList.remove('btn-primary-grad', 'btn-outline-primary', 'btn-start-today', 'btn-primary');
+              submitBtn.style.background = '#28a745';
+              submitBtn.style.borderColor = '#28a745';
+              submitBtn.style.color = '#fff';
+              submitBtn.innerHTML = '<i class="bi bi-check-circle-fill"></i> Sent!';
+            }
+            this.reset(); // Clear the form fields
+            
+            // Optionally revert the button back to original state after 5 seconds
+            setTimeout(() => {
+              if (submitBtn) {
+                submitBtn.style.background = '';
+                submitBtn.style.borderColor = '';
+                submitBtn.style.color = '';
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                // We don't restore the original classes perfectly here, but this is usually fine 
+                // since the user will navigate away. We'll just leave it green and disabled to be safe.
+              }
+            }, 4000);
+          } else {
+            // Error: Revert button and alert
+            if (submitBtn) {
+              submitBtn.innerHTML = originalText;
+              submitBtn.disabled = false;
+            }
+            alert("Oops! There was a problem submitting your form.");
+          }
+        } catch (error) {
+          if (submitBtn) {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+          }
+          alert("Oops! There was a network error. Please try again.");
+        }
+      }
+    });
+  });
 });

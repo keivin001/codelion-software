@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0056FE" />
+      <stop offset="100%" stop-color="#00B4FE" />
+    </linearGradient>
+    <style>
+      .db-cylinder { fill: #070f1e; stroke: #cbd5e1; stroke-width: 2.5; }
+      .db-top { fill: url(#blueGrad); stroke: #cbd5e1; stroke-width: 2.5; }
+      .db-line { stroke: #cbd5e1; stroke-width: 2; fill: none; }
+      .cog { fill: none; stroke: #00B4FE; stroke-width: 2.5; transform-origin: 48px 44px; animation: spin 10s linear infinite; }
+      .led { fill: #00B4FE; animation: blink 1.2s infinite alternate; }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      @keyframes blink { from { opacity: 0.3; } to { opacity: 1; } }
+    </style>
+  </defs>
+  <!-- Database Stack -->
+  <path d="M12,18 L12,32 C12,36 34,36 34,32 L34,18" class="db-cylinder" />
+  <path d="M12,32 L12,46 C12,50 34,50 34,46 L34,32" class="db-cylinder" />
+  <!-- Ellipses -->
+  <ellipse cx="23" cy="18" rx="11" ry="4" class="db-top" />
+  <ellipse cx="23" cy="32" rx="11" ry="4" class="db-cylinder" />
+  <ellipse cx="23" cy="46" rx="11" ry="4" class="db-cylinder" />
+  <!-- Database details (indicator lights) -->
+  <circle cx="18" cy="25" r="1.5" class="led" />
+  <circle cx="18" cy="39" r="1.5" class="led" style="animation-delay: 0.4s;" />
+  <circle cx="18" cy="48" r="1.5" class="led" style="animation-delay: 0.8s;" />
+  <!-- Connecting Cogwheel -->
+  <circle cx="48" cy="44" r="8" class="cog" stroke-dasharray="4 2" />
+  <circle cx="48" cy="44" r="4" fill="#070f1e" stroke="#00B4FE" stroke-width="2" />
+</svg>
